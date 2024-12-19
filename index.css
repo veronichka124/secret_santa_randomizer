@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  font-family: "Grandstander", cursive;
+  text-align: center;
+  height: 100vh;
+  background-color: #97c1bd;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 200px);
+}
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+}
+#showNameBtn {
+  background-color: #cb3838;
+  color: white;
+}
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #fff;
+  color: #cb3838;
+}
+.icon-button .material-icons {
+  font-size: 24px;
+  color: #cb3838;
+  display: inline;
+}
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #fff;
+}
+.snowflake {
+  position: absolute;
+  color: white;
+  font-size: 1em;
+  top: -10px;
+  animation: fall 5s linear infinite;
+  z-index: -1;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+.santa-image {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  height: 200px;
+  width: 200px;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px;
+  color: gray;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -100px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+#nameInputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  width: 100%;
+  max-width: 300px;
+}
+.inline {
+  display: flex;
+  align-items: center;
+}
+#submitNamesBtn {
+  background-color: #fff;
+  color: #cb3838;
+}
+#nameButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.name-button {
+  padding: 10px 15px;
+  margin: 0;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.name-button.selected {
+  background-color: #f0a500;
+  color: white;
+  border-color: #f0a500;
+}
