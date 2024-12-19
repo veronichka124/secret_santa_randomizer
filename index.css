@@ -146,7 +146,8 @@ input {
   padding: 10px 15px;
   margin: 0;
   background-color: #fff;
-  border: 2px solid #ddd;
+  color: #333;
+  border: 2px solid #fff;
   border-radius: 5px;
   cursor: pointer;
 }
